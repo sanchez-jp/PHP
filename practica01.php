@@ -68,7 +68,7 @@ and open the template in the editor.
                 $i ++;
             }
             
-            echo "<br>";
+            echo "<br><br>";
             
             for ($i=0; $i<10; $i++){
                 echo "$i <br>";
