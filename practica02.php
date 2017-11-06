@@ -22,26 +22,33 @@
                 <td>Caballo</td>
             </tr>
         </table>
+        
+       
+        <table border>
+            <tr>
+                <td>Apellido1</td>
+                <td>Apellido2</td>
+                <td>Nombre</td>
+            </tr>
+            
         <?php
-        echo "<br><br>";
+         echo "<br><br>";
         /* Tablas con PHP */
-        echo "<table border>"
-            ."<tr>"
-                ."<td>Apellido1</td>"
-                ."<td>Apellido2</td>"
-                ."<td>Nombre</td>"
-            ."</tr>";
         /* Con php generamos las distintas filas */
-        for($fila=1; $fila<=3; $fila++){
-            echo "<tr>"; // Pintamos la fila
-            for($columna=1; $columna<=3; $columna++){
-                echo "<td>";
-                echo "$fila.$columna";
-                echo "</td>";
-            }
-            echo "</tr>";
-        }
-        echo "</table>";
+        for($fila=1; $fila<=3; $fila++){ 
         ?>
+            <tr> <!-- Pintamos la fila con html -->
+            <?php /* Añadimos los elementos a la tabla con php */
+            for($columna=1; $columna<=3; $columna++){ ?>
+                <!--Pintamos columna con html e introducimos elemento con php-->
+                <td> <?php echo $fila.$columna ?> </td>   
+            <?php
+            }
+            ?>
+            </tr> <!-- Cerramos la fila en html -->
+        <?php /* Cierre del for del código php */   
+        }
+        ?>
+        </table>     
     </body>
 </html>
